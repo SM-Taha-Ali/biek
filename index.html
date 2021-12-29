@@ -1,56 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Calculator</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>BIEK</title>
 </head>
+
 <body>
-    <div class="main">
-        <div class="calculator">
-            <div class="screen">
-                <input type="text" id="screen" disabled>
+    <div class="container">
+        <div class="header row">
+            <div class="col-lg-2 col-md-2 col-sm-12 icon-cont">
+                <img class="biek-icon"
+                    src="https://play-lh.googleusercontent.com/qlFtDu5ee8FWMjD-J6uGXRyJfNqMrazDDgZb-bC-V_8JBlWYd_ucxjpPtLDT-WGEZW4"
+                    alt="" width="50%">
             </div>
-            <div class="keypad">
-                    <div class="row">
-                        <button class="btn btnc" onclick="clearValue()">C</button>
-                        <button class="btn" onclick="getValue(7)">7</button>
-                        <button class="btn" onclick="getValue(4)">4</button>
-                        <button class="btn" onclick="getValue(1)">1</button>
-                        <button class="btn1 btnop" onclick="delValue()">DEL</button>
-                    </div>
-
-                    <div class="row">
-                        <button class="btn2" onclick="getValue('(')">(</button>
-                        <button class="btn" onclick="getValue(8)">8</button>
-                        <button class="btn" onclick="getValue(5)">5</button>
-                        <button class="btn" onclick="getValue(2)">2</button>
-                        <button class="btn" onclick="getValue(0)">0</button>
-                    </div>
-
-                    <div class="row">
-                        <button class="btn2" onclick="getValue(')')">)</button>
-                        <button class="btn" onclick="getValue(9)">9</button>
-                        <button class="btn" onclick="getValue(6)">6</button>
-                        <button class="btn" onclick="getValue(3)">3</button>
-                        <button class="btn2" onclick="getValue('.')">.</button>
-                    </div>
-
-                    <div class="row">
-                        <button class="btn2 btnop" onclick="getValue('/')">/</button>
-                        <button class="btn btnop" onclick="getValue('*')">x</button>
-                        <button class="btn2 btnop" onclick="getValue('-')">-</button>
-                        <button class="btn btnop" onclick="getValue('+')">+</button>
-                        <button class="btn btneq" onclick="calValue()">=</button>
-                    </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center">
+                <p class="heading-1">BOARD OF INTERMEDIATE KARACHI</p>
+                <p class="heading-1">EXAMINATION FORM H.S.C. PART-I COMMERCE GROUP</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 d-flex flex-column justify-content-center">
+                <p class="heading-1 text-center">ANNUAL</p>
+                <div class="text-center">
+                    <input type="number" min="1900" max="2099" step="1" value="2016" class="px-1" />
                 </div>
+            </div>
+        </div>
+
+        <div class="header-2 row mt-3">
+            <div class="col-2 text-start">
+                <span class="he2">CP-XI</span>
+            </div>
+            <div class="col-8 text-center">
+                <span class="he2">COMMERCE PRIVATE GROUP</span>
+            </div>
+            <div class="col-2 text-end">
+                <span class="he2">F21</span>
             </div>
         </div>
     </div>
 
+
+    <div class="body mt-5">
+        <div class="container-md">
+            <h3>PERSONAL DETAILS</h3>
+            <div class="form-section mt-3 mb-5 py-3">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12 d-flex flex-column justify-content-between">
+                        <div>
+                            <label for="name" class="label">Name</label> <br>
+                        </div>
+                        <input type="text" name="" id="name" class="px-2 py-1"> <br>
+                        <div>
+                            <label for="date" class="label">Date of Birth</label> <br>
+                        </div>
+                        <input type="date" name="" id="date" class="px-2 py-1"> <br>
+                        <div>
+                            <label for="name" class="label">Gender</label> <br>
+                        </div>
+                        <select name="" id="gender" class="px-2 py-1">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Not-Specified">Not-Specified</option>
+                        </select> <br>
+
+                        <div>
+                            <label for="" class="label">Residential Area</label> <br>
+                        </div>
+                        <textarea name="" id="address" cols="35" rows="3" class="px-2 py-1"></textarea> <br>
+
+                        <div>
+                            <label for="" class="label">Contact Number</label> <br>
+                        </div>
+                        <input type="text" name="" id="contact" class="px-2 py-1"> <br>
+
+
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 d-flex flex-column justify-content-between me-auto">
+                        <div>
+                            <label for="" class="label">Father Name</label> <br>
+                        </div>
+                        <input type="text" name="" id="f_name" class="px-2 py-1"> <br>
+
+                        <div>
+                            <label for="" class="label">Nationality</label> <br>
+                        </div>
+                        <input type="text" name="" id="nationality" class="px-2 py-1"> <br>
+
+                        <div>
+                            <label for="" class="label">Religion</label> <br>
+                        </div>
+                        <select name="" id="religion" class="px-2 py-1">
+                            <option value="Islam">Islam</option>
+                            <option value="Other">Other</option>
+                        </select> <br>
+
+                        <div>
+                            <label for="" class="label">CNIC Number</label> <br>
+                        </div>
+                        <input type="text" name="" id="cnic" class="px-2 py-1"> <br>
+
+                        <div>
+                            <label for="" class="label">Post Code</label> <br>
+                        </div>
+                        <input type="text" name="" id="ps-code" class="px-2 py-1"> <br>
+
+                        <div>
+                            <label for="" class="label">Mark of Identification</label> <br>
+                        </div>
+                        <input type="text" name="" id="mk-ID" class="px-2 py-1"> <br>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 upload-cont">
+                        <label for="" class="label mt-4">Photo Blue Background</label> <br>
+                        <label for="photo" class="upload-btn mt-2"><i class="fa fa-upload" aria-hidden="true"></i>
+                            Upload
+                            File</label>
+                        <input type="file" name="filename" id="photo" class="d-none upload-btn"> <br>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 upload-cont">
+                        <label for="" class="label mt-4">Attested S.S.C Marksheet</label> <br>
+                        <label for="marksheet" class="upload-btn mt-2"><i class="fa fa-upload" aria-hidden="true"></i>
+                            Upload File</label>
+                        <input type="file" name="filename" id="marksheet" class="d-none"> <br>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 upload-cont">
+                        <label for="" class="label mt-4">Registration Card</label> <br>
+                        <label for="reg-card" class="upload-btn mt-2"><i class="fa fa-upload" aria-hidden="true"></i>
+                            Upload File</label>
+                        <input type="file" name="filename" id="reg-card" class="d-none"> <br>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 upload-cont">
+                        <label for="" class="label mt-4">Permission Letter</label> <br>
+                        <label for="per-letter" class="upload-btn mt-2"><i class="fa fa-upload" aria-hidden="true"></i>
+                            Upload File</label>
+                        <input type="file" name="filename" id="per-letter" class="d-none"> <br>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 75px; margin-bottom: 30px;">DETAILS OF PREVIOUS EXAMINATION PASSED</h3>
+
+            <table class="table" id="exam-detailer">
+                <thead>
+                    <th scope="col">SNO</th>
+                    <th scope="col">FIELD</th>
+                    <th scope="col">S.S.C OR EQUIVALENT</th>
+                    <th scope="col">H.S.C PART-I (EXTERNAL)</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-bold">1</td>
+                        <td class="fw-bold">BOARD / EXAMINATION BODY</td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">2</td>
+                        <td class="fw-bold">ROLL NO.</td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">3</td>
+                        <td class="fw-bold">GROUP</td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">4</td>
+                        <td class="fw-bold">YEAR</td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">5</td>
+                        <td class="fw-bold">GRADE + MARKS</td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                        <td><input type="text" name="" id="name" class="px-2 py-1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-center mt-5 mb-4">PLEASE TICK AGAINST SUBJECT OF INTEREST</h4>
+
+            <h4 class="mt-5 mb-4">COMPULSORY SUBJECTS</h4>
+            <table class="table my-4">
+                <thead>
+                    <th scope="col">COURSE CODE</th>
+                    <th scope="col">COURSE NAME</th>
+                    <th scope="col">CATEGORY</th>
+                    <th scope="col" class="text-center">ACTION</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>UN</td>
+                        <td>Urdu Normal</td>
+                        <td>For Normal Candidates</td>
+                        <td class="text-center"><input type="checkbox" name="UN" id="un"></td>
+                    </tr>
+                    <tr>
+                        <td>UE</td>
+                        <td>Urdu Easy</td>
+                        <td>With Board's Permission</td>
+                        <td class="text-center"><input type="checkbox" name="UE" id="ue"></td>
+                    </tr>
+                    <tr>
+                        <td>UG</td>
+                        <td>Urdu Non Mother Tongue</td>
+                        <td>With Board's Permission</td>
+                        <td class="text-center"><input type="checkbox" name="UG" id="ug"></td>
+                    </tr>
+                    <tr>
+                        <td>HC</td>
+                        <td>History & Culture of Pakistan</td>
+                        <td>For Foreign Candidates</td>
+                        <td class="text-center"><input type="checkbox" name="HC" id="hc"></td>
+                    </tr>
+                    <tr>
+                        <td>EN</td>
+                        <td>English Normal</td>
+                        <td>For Normal Candidates</td>
+                        <td class="text-center"><input type="checkbox" name="EN" id="en"></td>
+                    </tr>
+                    <tr>
+                        <td>EA</td>
+                        <td>English Advanced</td>
+                        <td>With Board's Permission</td>
+                        <td class="text-center"><input type="checkbox" name="EA" id="ea"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="mb-4 mt-5">OPTIONAL SUBJECTS</h4>
+            <table class="table my-4">
+                <thead>
+                    <th scope="col">SNO</th>
+                    <th scope="col">COURSE NAME</th>
+                    <th scope="col" class="text-center">ACTION</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Principle of Accounting</td>
+                        <td class="text-center"><input type="checkbox" name="" id="accounting"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Principle of Commerce</td>
+                        <td class="text-center"><input type="checkbox" name="" id="commerce"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Principle of Economics</td>
+                        <td class="text-center"><input type="checkbox" name="" id="economics"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Business Mathematics</td>
+                        <td class="text-center"><input type="checkbox" name="" id="math"></td>
+                </tbody>
+            </table>
+
+
+            <div class="text-center">
+                <button class="btn btn-success my-5 text-white" type="button" data-toggle="modal" data-target="#exampleModal" onclick="confirm()">Submit</button>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Confirm Resubmission</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row modal-row my-2">
+                            <div class="col-4">
+                                <label for="name" class="label">Name</label> <br>
+                                <input type="text" name="" id="res_name" disabled class="db_inp" > 
+                            </div>
+                            <div class="col-4">
+                                <label for="name" class="label">Father Name</label> <br>
+                                <input type="text" name="" id="res_fname" disabled class="db_inp" >
+                            </div>
+                            <div class="col-4">
+                                <label for="name" class="label">D.O.B</label> <br>
+                                <input type="text" name="" id="res_dob" disabled class="db_inp" >
+                            </div>
+                        </div>
+                        <div class="row modal-row my-2">
+                            <div class="col-4">
+                                <label for="name" class="label">Nationality</label> <br>
+                                <input type="text" name="" id="res_nationality" disabled class="db_inp"> 
+                            </div>
+                            <div class="col-4">
+                                <label for="name" class="label">Gender</label> <br>
+                                <input type="text" name="" id="res_gender" disabled class="db_inp" >
+                            </div>
+                            <div class="col-4">
+                                <label for="name" class="label">Religion</label> <br>
+                                <input type="text" name="" id="res_religion" disabled class="db_inp" >
+                            </div>
+                        </div>
+                        <div class="row modal-row my-2">
+                            <div class="col-4">
+                                <label for="name" class="label">Post Code</label> <br>
+                                <input type="text" name="" id="res_ps_code" disabled class="db_inp" > 
+                            </div>
+                            <div class="col-4">
+                                <label for="name" class="label">Mark of Identification</label> <br>
+                                <input type="text" name="" id="res_mk" disabled class="db_inp" >
+                            </div>
+                            <div class="col-4">
+                                <label for="name" class="label">Contact No.</label> <br>
+                                <input type="text" name="" id="res_contact" disabled class="db_inp" >
+                            </div>
+                        </div>
+                        <div class="row modal-row my-2">
+                            <div class="col-6">
+                                <label for="name" class="label">Address</label> <br>
+                                <input type="text" name="" id="res_address" disabled class="db_inp" > 
+                            </div>
+                            <div class="col-6">
+                                <label for="name" class="label">CNIC</label> <br>
+                                <input type="text" name="" id="res_cnic" disabled class="db_inp" >
+                            </div>
+                        </div>
+                        <div class="row modal-row my-2 subject-div mt-4 py-3">
+                            <h5>Subjects Selected</h5>
+                            <div class="col-12 py-2">
+                                <table class="table" id="subjects">
+                                    <thead>
+                                        <th>SNO.</th>
+                                        <th>SUBJECTS</th>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+                      <button type="button" id="submit" class="btn btn-success" data-dismiss="modal" onclick="submit()">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              
+
+        </div>
+    </div>
+
+    <div class="alert alert-success message" id="myalert" role="alert">
+        Form Has Been Submitted Successfully!
+    </div>
+
+    <div id="divLoading">
+        <div id="loading">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
     <script src="app.js"></script>
+    <script src="jquery-1.6.1.js"></script>
+    <script src="my_jquery.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>

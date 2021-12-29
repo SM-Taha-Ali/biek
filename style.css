@@ -1,111 +1,147 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.main{
-    width: 100%;
-    text-align: center;
+
+.heading-1{
+    font-size: 1.3em;
+    font-weight: bold;
+
 }
 
-.calculator{
-    padding: 20px;
-    background-color: rgb(26, 25, 25);
-    border-radius: 10px;
-    width: 350px;
-    margin: 100px auto;
-    box-shadow: rgba(0, 0, 0, 0.2);
+.he2{
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.screen{
-    background-color: #696969;
-    width: 90%;
+.label{
+    margin-bottom: 0.2em;
+}
+
+.upload-btn{
+    background-color: #5cb85c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.upload-btn:hover{
+    background-color: #4ee44e;
+    padding: 10px;
+}
+
+th{
+    padding: 30px;
+}
+
+.modal-ku{
+    width: 750px;
     margin: auto;
 }
 
-#screen{
-    outline: none;
-    border: none;
-    background: #696969;
-    padding: 10px;
-    height: 30px;
-    color: white;
-    border: 1px solid #0000;
-    border-radius: 5px;
+.db_inp{
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
 }
 
-.keypad{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+#divLoading {
+    margin: 0px;
+    display: none;
+    padding: 0px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 30001;
+    opacity: 0.8;
 }
 
-.btn{
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    margin: 4px;
-    background-color: rgb(65, 63, 63);
-    color: white;
-    border-radius: 15px;
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
-.btn1{
-    outline: none;
-    border: none;
-    padding: 10px 22px;
-    margin: 4px;
-    background-color: rgb(65, 63, 63);
-    color: white;
-    border-radius: 15px;
+#myalert{
+    display: none;
 }
 
-.btn:hover{
-    background-color: rgb(102, 100, 100);
+.message{
+    width: 400px; 
+    position: fixed; 
+    top: 5%;
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    z-index: 9999;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .upload-btn{
+        text-align: center;
+    }
+
+    .heading-1{
+        font-size: 1em;
+        font-weight: bold;
     
-}
-
-.btn2{
-    outline: none;
-    border: none;
-    padding: 10px 32px;
-    margin: 4px;
-    background-color: rgb(65, 63, 63);
-    color: white;
-    border-radius: 15px;
-}
-
-.btn2:hover{
-    background-color: rgb(102, 100, 100);
+    }
     
-}
+    .he2{
+        font-size: 1em;
+        font-weight: bold;
+    }
 
-.btnop{
-    background-color: #dba400;
-}
+    .icon-cont{
+        text-align: center;
+    }
+    
+    .upload-cont{
+        text-align: center;
+    }
+  }
 
-.btnop:hover{
-    background-color: #e2b221f5;
-    color: black;
-}
+  @media only screen and (max-width: 768px) {
+    .biek-icon{
+        width: 25%;
+    }
+  }
 
-.btnc{
-    background-color: rgba(47, 9, 9, 0.7);
-    color: rgb(192, 3, 3);
-}
+  @media only screen and (max-width: 576px) {
+    .heading-1{
+        font-size: 0.7em;
+        font-weight: bold;
+    
+    }
+    
+    .he2{
+        font-size: 1em;
+        font-weight: bold;
+    }
 
-.btnc:hover{
-    background-color: rgba(47, 9, 9, 0.7);
-    color: rgb(255, 0, 0);
-}
+    .biek-icon{
+        width: 15%;
+    }
 
-.btneq{
-    background-color: #00ffb3;
-}
+    .upload-cont{
+        text-align: center;
+    }
 
-.btneq:hover{
-    background-color: #47ffc8cc;
-    color: black;
-}
+    .exam-detailer{
+        width: auto;
+    }
+
+    .message{
+        width: 100%; 
+        position: fixed; 
+        top: 5%;
+        left: 50%; 
+        transform: translate(-50%, 0); 
+        z-index: 9999;
+    }
+  }
